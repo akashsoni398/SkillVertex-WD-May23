@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .fullscreen-div {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: none;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+        }
+
+        #div1 {
+            background-color: #ff0000; /* Red */
+        }
+
+        #div2 {
+            background-color: #00ff00; /* Green */
+        }
+
+        #div3 {
+            background-color: #0000ff; /* Blue */
+        }
+
+        @keyframes slideIn {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(0); }
+        }
+
+        @keyframes slideOut {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+    </style>
+</head>
+<body>
+    <div id="page1">
+        <button onclick="showDivs()">Click Me</button>
+    </div>
+
+    <div class="fullscreen-div" id="div1"></div>
+    <div class="fullscreen-div" id="div2"></div>
+    <div class="fullscreen-div" id="div3"></div>
+
+    <div id="page2" style="display: none;">
+        <!-- Content for page 2 -->
+    </div>
+
+    <script>
+        function showDivs() {
+            var div1 = document.getElementById("div1");
+            var div2 = document.getElementById("div2");
+            var div3 = document.getElementById("div3");
+            var page2 = document.getElementById("page2");
+
+            // Slide in the div tags
+            div1.style.display = "block";
+            div1.style.animationName = "slideIn";
+            div1.style.animationDelay = "0.1s";
+
+            div2.style.display = "block";
+            div2.style.animationName = "slideIn";
+            div2.style.animationDelay = "0.4s";
+
+            div3.style.display = "block";
+            div3.style.animationName = "slideIn";
+            div3.style.animationDelay = "0.7s";
+
+            // After sliding in, slide out and display page 2
+            setTimeout(function() {
+                div1.style.animationName = "slideOut";
+                div2.style.animationName = "slideOut";
+                div3.style.animationName = "slideOut";
+
+                setTimeout(function() {
+                    document.getElementById("page1").style.display = "none";
+                    page2.style.display = "block";
+                }, 1000); // Change this delay to match slide out animation duration
+            }, 3000); // Change this delay to match slide in animation duration
+        }
+    </script>
+</body>
+</html>
