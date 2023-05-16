@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+header {
+    background-color: #111;
+    text-align: right;
+}
+header>a {
+    margin-right: 15px;
+    text-decoration: none;
+}
+header>a:link {
+    color: white;
+}
+header>a:hover {
+    color: rgb(210, 210, 210);
+}
+#dropdown {
+    display: inline-block;
+}
+#dropdown button {
+    color: white;
+    font-weight: bold;
+    background-color: green;
+    border: 0;
+    padding:10px 25px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#dropdown-content {
+    display: none;
+}
+#branding {
+    position: relative;
+    height: 150px;
+    background-color: #fbc815;
+}
+.left-aligned-container {
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+}
+.right-aligned-container {
+    position:absolute;
+    top: 0;
+    right: 0;
+}
+#company-brand {
+    position: absolute;
+    top: 0px;
+    left: 160px;
+}
+#company-brand h1 {
+    font-family: fantasy;
+    font-size: 65px;
+    font-weight: normal;
+    white-space:nowrap;
+}
+#company-brand p {
+    font-size: 18px;
+    white-space:nowrap;
+}
+
+#search-form {
+    position: relative;
+    top:60px;
+    right:40px;
+}
+#search-form>input {
+    position: absolute;
+    top:0;
+    right: 0;
+    width: 275px;
+    height: 30px;
+    border: none;
+    border-radius: 30px;
+    padding: 10px;
+    padding-right: 30px;
+}
+#search-form>button {
+    position: absolute;
+    top:0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 30px;
+    -webkit-text-stroke: 1px;
+    background-color: transparent;
+}
+
+#menu-open,#menu-close {
+    display: none;
+    background-color: transparent;
+    border: none;
+    font-size:45px;
+    -webkit-text-stroke: 1px;
+    position: relative;
+    top:50px;
+    right:40px;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: #333;
+    justify-content:space-evenly;
+}
+
+nav li {
+    list-style-type: none;
+}
+nav li a {
+    font-size: 22px;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    padding: 15px 25px;
+    white-space:nowrap;
+}
+
+@media only screen and (max-width: 850px) {
+    nav {
+        display: none;
+    }
+    #menu-open {
+        display: block;
+    }
+    #branding {
+        width: 100%;
+        
+    }
+    .left-aligned-container {
+        width: 100%;
+        position: relative;
+    }
+    #search-form {
+        display: none;
+    }
+}
+
