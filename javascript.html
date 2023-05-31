@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./javascript.js" type="text/javascript" />
+    <script>
+        //single line comment
+
+        /* multiple
+        line
+        comment */
+
+        //input
+        let verify = () => {
+            var x = document.getElementById('input').value;
+        }
+
+        let a = "String";    //string
+        let b = 324234;      //integer
+        let c = '2423423';
+        let d = true;        //boolean
+
+        let e = 23423432.3242; //float
+        
+        let f = Array(13123,"Akash Soni",true);      //arrays
+        let g = [13123,"Akash Soni",true];
+
+        let student1 = {                             //objects
+            name:"Akash Soni",
+            course:"Web dev",
+            marks: {
+                assignments: {
+                    assn1:34,
+                    assn2:43
+                },
+                projects: {
+                    minor_project:56,
+                    major:31
+                }
+            }
+        }
+        document.write(student1.marks.assignments.assn1);
+
+        //output
+        document.getElementById('para').innerHTML = "<b>hello</b>";
+        document.getElementById('para').innerText = "<b>hello</b>";
+
+        document.write("Hi");
+
+        window.alert("Alert! Error 402");
+        let r = window.confirm("Are you sure?");
+        let prompt = window.prompt("Are you sure? Write file name `helloworld.txt` to confirm");
+
+        console.log("Error message");
+
+        window.print();
+
+
+        //storage
+        var x;
+        x = 'some value';
+
+        let y;
+
+        if() {
+            var x;
+            let y;
+        }
+        x=234;
+        y=24234;
+
+        const z;
+        z=131;
+        z=33424;
+
+        //operators
+        'Arithmetic ops=>','+','-','*','/','%','++','--';   //arithmetic operators : int
+
+        'Comparison ops=>','>','<','>=','<=','==','===','!=';   //arithmetic operators : boolean
+        $x=123;$y='123';
+        $x==$y;  //true
+        $x===$y; //false
+
+        'logical ops=>','&&','||','!';   //logical operators : boolean
+        $x==$y && $x===$y;
+        $x='dollar X';
+        if($x) {}  //true
+        if(!$x) {} //false
+
+        'Assignment ops=>','=','+=','-=','*=','/=','%=';   //assignment operators
+        $op = 10;
+        $op=$op+10;   $op+=10;
+        $op=$op%10;   $op%=10;
+
+        'ternary/functional operator';
+        let result = condition ? value1 : value2;
+
+        //branching -- if, if...else, else if, switch..case
+
+        //looping -- for, while, do..while, for...of, for...in
+
+        //functions
+        function func(a,b) {}     //orthodox function
+        let func = (a,b) => {}    // ES6/modern function
+        let func = (a,b,() => {}) //callback function
+
+        //events
+
+        //errors
+
+        //error handling
+
+        //data validation
+
+
+
+
+
+        
+
+    </script>
+</head>
+<body>
+    <p id="para" onclick="add()"></p>
+    <input type="text" id="input" />
+    <button type="submit" onclick="verify()"></button>
+    <script>
+        document.getElementById('para').innerHTML = "<b>Hello World</b>";
+    </script>
+</body>
+</html>
+<noscript>Please enable Javascript</noscript>
